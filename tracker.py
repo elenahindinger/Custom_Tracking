@@ -14,10 +14,16 @@ previous_positions = [None] * len(ROIs)
 
 previous_frame = None
 previous_position = None
-for frame_index, img_name in enumerate(os.listdir(FRAMES_DIR)):
-    if img_name.endswith(frames_extension):
-        frame = os.path.join(FRAMES_DIR, img_name)
-        img_full_frame = cv2.imread(frame)
+
+frame_index = frame_starting_index
+
+while True:
+
+    frame_name = frames_prefix + str(frame_index) + frames_extension
+    frame_file = os.path.join(FRAMES_DIR, frame_name)
+
+    if os.path.isfile(frame_file):
+        img_full_frame = cv2.imread(frame_file)
 
         img_full_frame_gray = cv2.cvtColor(img_full_frame, cv2.COLOR_BGR2GRAY)
 
@@ -67,3 +73,10 @@ for frame_index, img_name in enumerate(os.listdir(FRAMES_DIR)):
             file_line = str(frame_index) + ' , '
             file_line += str(distance) + '\n'
             results_files[region_index].write(file_line)
+
+        frame_index += 1
+        # if frame_index == 1000:
+        #     break
+
+    else:
+        break

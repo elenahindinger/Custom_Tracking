@@ -1,9 +1,12 @@
 from models import *
 import os
 
-FRAMES_DIR = os.path.join('media', 'frames')
+# FRAMES_DIR = os.path.join('media', 'frames')
+FRAMES_DIR = os.path.join('I:\\Nawwar','Elena','Single frame videos','acute_cholica_1')
 RESULTS_FILES_DIR = os.path.join('media', 'results')
-frames_extension = 'tiff'
+frames_extension = '.tiff'
+frames_prefix = 'acute_cholica_1_frame_'
+frame_starting_index = 10
 
 # region ROIs
 
