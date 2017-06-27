@@ -6,7 +6,7 @@ from scipy.spatial import distance
 from skimage import morphology
 from skimage import img_as_ubyte
 import cv2
-from geometry import *
+from models import *
 import math
 
 
