@@ -1,12 +1,12 @@
 from models import *
 import os
 
-# FRAMES_DIR = os.path.join('media', 'frames')
 FRAMES_DIR = os.path.join('I:\\Nawwar','Elena','Single frame videos','acute_cholica_1')
 RESULTS_FILES_DIR = os.path.join('media', 'results')
 frames_extension = '.tiff'
 frames_prefix = 'acute_cholica_1_frame_'
-frame_starting_index = 10
+
+frame_starting_index = 1
 
 # region ROIs
 
@@ -14,6 +14,7 @@ region_default_width = 35
 region_default_height = 35
 
 regions_offset_from_start = Vector(0, 0, 0)
+
 space_between_regions = Vector(15.5, 15.5, 0)
 regions_start_point = Vector(30, 65, 0)
 

@@ -1,5 +1,8 @@
 from configurations import *
 
+def initialize_rsults_folder():
+    if not os.path.isdir(RESULTS_FILES_DIR):
+        os.mkdir(RESULTS_FILES_DIR)
 
 def initialize_rois():
     ROIs = []
